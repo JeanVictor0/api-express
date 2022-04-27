@@ -7,9 +7,7 @@ const router = express.Router()
 // Nessa rota usara autenticacao. Seria mais para projetos e coisas privadas. E ate como sites com login usando cookies ou localstorage para amazenar coisas
 router.use(authMiddleware)
 
-router.get('/',(req,res,next) => {
-    res.statusCode(200)
-})
+router.get('/', controller.getProject)
 
 router.get('/:projectid', controller.byId)
 
